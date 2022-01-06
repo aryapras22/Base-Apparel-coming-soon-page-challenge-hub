@@ -1,0 +1,147 @@
+:root {
+  --background-color: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 0%, 100%));
+}
+
+body {
+  background: var(--background-color);
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+
+.container {
+  background: var(--background-color);
+  display: flex;
+}
+
+.left-container {
+  flex: 60%;
+  padding: 5% 150px 0;
+}
+
+.right-container {
+  flex: 40%;
+}
+
+.text {
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+}
+
+.coming-soon {
+  font-weight: 600;
+  color: rgba(67, 58, 59, 255);
+}
+
+.hero-mobile {
+  display: none;
+}
+
+/*-------- form styles-------- */
+form {
+  margin-top: 50px;
+}
+
+.false-input {
+  outline: 1px solid hsl(0, 93%, 68%);
+  background: url("images/icon-error.svg"), var(--background-color);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 270px;
+}
+
+.error-message {
+  color: hsl(0, 93%, 68%);
+  font-size: 14px;
+  padding: 0 15px 0;
+  margin: 5px;
+}
+
+input[type=email] {
+  width: 75%;
+  padding: 15px 20px 15px;
+  border: 0.5px solid hsl(0, 36%, 70%);
+  border-radius: 25px;
+  background-color: var(--background-color);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+button {
+  width: 90px;
+  height: 50px;
+  margin-top: -1px;
+  border: 0.5px none;
+  border-radius: 25px;
+  position: absolute;
+  left: 450px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  transition-duration: 0s;
+}
+
+button:hover {
+  background: hsl(0, 80%, 86%);
+  box-shadow: 2px 5px 10px hsl(0, 80%, 86%);
+  scale: 1.1;
+}
+
+/* mobile section */
+@media only screen and (max-width: 375px) {
+  .left-container {
+    width: 300px;
+    padding: 10%;
+  }
+
+  .right-container {
+    display: none;
+  }
+
+  button {
+    left: 250px;
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  form {
+    margin-top: 25px;
+    text-align: left;
+  }
+
+  input[type=email] {
+    text-align: left
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .hero-mobile {
+    display: block;
+    position: relative;
+    right: 37.5px;
+    padding: 2rem 0 4rem 0;
+  }
+
+  .logo-company img {
+    width: 45%;
+  }
+}
